@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 160px 0;
+  width: 100%;
+  height: 100%;
+  font-family: Open Sans
+}
+
+header {
+  display: block;
+  background-color: #404041;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  height: 140px;
+  width: 100%;
+}
+
+.guess-form {
+  width: 100%;
+  text-align: center;
+}
+
+.font__one {
+  color: #ed458B;
+  font-family: 700;
+}
+
+.font__two {
+  color: #e6e7e8;
+  font-family: 300;
+  margin-left: 18px;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 4.9em;
+  position: relative;
+  top:-40px;
+}
+
+.button--clickable:disabled {
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  background-color: #D0d2d3;
+  text-align: center;
+  font-size: 2.5em;
+  border-radius: 32px;
+  font-weight: 300;
+}
+
+.button:hover {
+  background-color: #eb008b;
+}
+
+.button--clickable {
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  background-color: #929497;
+  text-align: center;
+  font-size: 2.5em;
+  border-radius: 32px;
+  font-weight: 300;
+}
+
+.button--clickable:hover {
+  background-color: #eb008b;
+}
+
+
+
+.form__input {
+  width: 43%;
+  height: 54px;
+  margin-top: 50px;
+  font-size: 2.3em;
+  font-weight: 300;
+}
+
+.button__guess, .button__clear {
+  margin-top: 50px;
+  width: 21%;
+  padding: 8px 0;
+}
+
+.button__guess {
+  margin-right: 14px;
+}
+
+.button__clear {
+  margin-left: 14px;
+}
+
+.text__guess {
+  font-size:17em;
+  color: #eb008b;
+  padding: 0;
+  margin: 0;
+  line-height:1em;
+}
+
+.text__last, .text__response {
+  color: #404041;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.text-load {
+  color: #404041;
+  font-size: 2.5em;
+  margin:0;
+  padding-top: 50px;
+}
+
+.text__last {
+  margin-top: 101px;
+}
+
+.text--hidden {
+  display:none;
+}
+
+.error--text {
+  color: red;
+  font-size: 1em
+  line-height:0;
+}
+
+.button__reset {
+  width: 43%;
+  margin-top:70px;
+}
