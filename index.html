@@ -10,6 +10,11 @@
     <h1><span class="font__one">Number</span><span class="font__two">Guesser</span></h1>
   </header>
   <form class="guess-form">
+    <div id="range-input" class="range-form">
+      <input type="number" id="min-input" placeholder="Enter your min" class="min__input">
+      <input type="number" id="max-input" placeholder="Enter your max" class="max__input">
+        <button type="submit" value="submit" class="button-max-min" id="max-min-button" disabled>Set</button>
+    </div>
     <label for="guess"></label>
     <input type="number" id="user-input" placeholder="Enter your guess" class="form__input"></br>
     <p id="error-text" class="error--text"></p>
