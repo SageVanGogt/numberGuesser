@@ -6,7 +6,7 @@ console.log(ranNum);
 var minNum = 1;
 var maxNum = 100;
 
-
+// Keeps count of correct guesses
 //Turns the guess from a string into a number
 function guessNum() {
   var number = parseInt(document.getElementById('user-input').value);
@@ -30,6 +30,8 @@ function numCheck() {
     response = 'Your number is too low';
   } else if (guessNum() === ranNum) {
     response = 'BOOM!';
+    maxNum = maxNum + 10
+    minNum = minNum - 10
   }
   return response;
 }
@@ -126,18 +128,20 @@ function resetNumbers() {
 }
 document.querySelector('#max-min-button').addEventListener('click', resetNumbers);
  
-
-//  function genRanNum() {
-//   var minNum = parseInt(document.querySelector('#min-input').value);
-//   var maxNum = parseInt(document.querySelector('#max-input').value);
-//   var ranNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-//   return ranNum
-// 
-
-// function showRanNum() {
-//   document.querySelector('p').innerHTML = genRanNum();
+//Boundaries
+// function limitNums() {
+//   if (minNum > maxNum) {
+//     document.querySelector('#max-min-button').disabled = true;
+//   } else if (minNum < maxNum) {
+//     document.querySelector('#max-min-button').disabled = false;
+//   }
 // }
-// el.addEventListener('click', showRanNum);
+// document.querySelector('#max-input').addEventListener('input', limitNums);
+// document.querySelector('#min-input').addEventListener('input', limitNums);
+// function increaseNum() {
+//   var 
+//   if (){
+
 //   }
 // }
 
