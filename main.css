@@ -144,16 +144,42 @@ h1 {
 }
 
 .range-form--showing {
-  width: 10%;
+  width: 40%;
   height: 50px;
   margin-top: 20px;
   font-size: 1.5em;
   font-weight: 300;
+  margin-left:30%;
 }
 
 .max__input, .min__input {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 300;
   width:100px;
-  height:70px;
+  height:50px;
+}
+
+.max__input {
+  float:right;
+}
+
+.min__input {
+  float: left;
+}
+
+.button-max-min {
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  background-color: #929497;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 20px;
+  font-weight: 300;
+  padding: 5px 15px;
+  margin-top:15px;
+}
+
+.button-max-min:hover {
+  background-color: #eb008b;
 }
