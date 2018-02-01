@@ -146,29 +146,30 @@ document.querySelector('#guess-button').addEventListener('click', minimusMaximus
  function disSetBtn() {
     event.preventDefault();
     var minInput = document.querySelector("#min-input");
-    var maxInput = document.querySelector('#max-input')
+    var maxInput = document.querySelector('#max-input');
     if (minInput.value !== '' && maxInput.value !== '') {
       document.querySelector("#max-min-button").disabled = false;
     } else if (minInput.value === '' || maxInput.value === '') {
       document.querySelector('#max-min-button').disabled = true;
-    }
-
-  console.log('parates')
+    } 
 }
 
 document.querySelector('#max-input').addEventListener('input', disSetBtn)
 document.querySelector('min-input').addEventListener('input', disSetBtn)
-// Boundaries
-// function disSet() {
-//   if (minNum > maxNum) {
-//     document.querySelector('#max-min-button').disabled = true;
-//   } else if (minNum < maxNum) {
-//     document.querySelector('#max-min-button').disabled = false;
-//   }
-// }
-// document.querySelector('#max-input').addEventListener('input', limitNums);
-// document.querySelector('#min-input').addEventListener('input', limitNums);
 
+
+//Disable Set Button if min is greater
+// function minMaxDisableBtn() {
+//     event.preventDefault();
+//     var minInput = document.querySelector("#min-input");
+//     var maxInput = document.querySelector('#max-input')
+//     if (minInput.value < maxInput.value) {
+//       document.querySelector("#max-min-button").disabled = false;
+//     } 
+// }
+
+// document.querySelector('#max-input').addEventListener('input', minMaxDisableBtn)
+// document.querySelector('min-input').addEventListener('input', minMaxDisbleBtn)
 
 
 
