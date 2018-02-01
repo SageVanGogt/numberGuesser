@@ -110,7 +110,7 @@ h1 {
 
 .text-load {
   color: #404041;
-  font-size: 100%;
+  font-size: 120%;
   margin:0;
   padding-top: 50px;
 }
@@ -151,6 +151,8 @@ h1 {
   margin-left: 28.3%;
 }
 
+
+/* max a min button and inputs */
 .max__input, .min__input {
   font-size: 1em;
   font-weight: 300;
@@ -198,3 +200,21 @@ h1 {
   background-color: #eb008b;
 }
 
+
+
+/*max min display */
+.min-max-display {
+  text-align: center;
+}
+
+#minimus {
+  padding-right: 14%;
+}
+
+.max-display {
+  padding-left: 8%;
+}
+
+#minimus, #maximus {
+  color: #eb008b;
+}

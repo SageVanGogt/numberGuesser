@@ -6,59 +6,62 @@ var maxNum = 100
 // var guessCounter = //how do i base this on numcheck
   
 function resetNumbers() {
-  event.preventDefault();
-  minNum = parseInt(document.querySelector('#min-input').value);
-  maxNum = parseInt(document.querySelector('#max-input').value);
-  ranNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-  console.log(ranNum);
+    event.preventDefault();
+    minNum = parseInt(document.querySelector('#min-input').value);
+    maxNum = parseInt(document.querySelector('#max-input').value);
+    ranNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+    console.log(ranNum);
 }
+
 document.querySelector('#max-min-button').addEventListener('click', resetNumbers);
 
 
 //Turns the guess from a string into a number
 function guessNum() {
-  var number = parseInt(document.getElementById('user-input').value);
-  return number;
-  console.log(goteem);
+    var number = parseInt(document.getElementById('user-input').value);
+    return number;
+    console.log(goteem);
 }
+
 var el = document.getElementById('guess-button');
 el.addEventListener("click", guessNum);
 
 //Display last guess and response
 function updateGuess() {
-  event.preventDefault();
-  document.getElementById('last-guess').innerHTML = guessNum();
-  document.getElementById('display-response').innerHTML = numCheck();
+    event.preventDefault();
+    document.getElementById('last-guess').innerHTML = guessNum();
+    document.getElementById('display-response').innerHTML = numCheck();
 }
+
 var el = document.getElementById('guess-button');
 el.addEventListener("click", updateGuess, false);
 
 //Reponse based on user guess
 function numCheck() {
-  if (guessNum() > ranNum) {
-    response = 'Thats too high';
-  } else if (guessNum() < ranNum) {
-    response = 'Your number is too low';
-  } else if (guessNum() === ranNum) {
-    response = 'BOOM!';
-    maxNum = maxNum + 10;
-    minNum = minNum - 10;
-    ranNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-    console.log(maxNum);
-    console.log(minNum);
+    if (guessNum() > ranNum) {
+      response = 'Thats too high';
+    } else if (guessNum() < ranNum) {
+      response = 'Your number is too low';
+    } else if (guessNum() === ranNum) {
+      response = 'BOOM!';
+      maxNum = maxNum + 10;
+      minNum = minNum - 10;
+      ranNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+      console.log(maxNum);
+      console.log(minNum);
+    }
+      console.log(ranNum);
+    return response;
   }
-    console.log(ranNum);
-  return response;
-}
 
 // Error message appears depending on user input if it's outside range
 function guessWrong(){
-  if (guessNum() < minNum || guessNum() > maxNum) {
-  document.getElementById('error-text').innerHTML = 'please guess a number in the boundaries';
-  document.querySelector('#error-text').classList.remove ('error-text-hidden')
-  } else if (guessNum() >= minNum || guessNum() <=  maxNum) {
-    document.getElementById('error-text').classList.add ('error-text-hidden')
-  } 
+    if (guessNum() < minNum || guessNum() > maxNum) {
+    document.getElementById('error-text').innerHTML = 'please guess a number in the boundaries';
+    document.querySelector('#error-text').classList.remove ('error-text-hidden')
+    } else if (guessNum() >= minNum || guessNum() <=  maxNum) {
+      document.getElementById('error-text').classList.add ('error-text-hidden')
+    } 
 }
 
 var guessClick = document.getElementById('user-input');
@@ -67,79 +70,94 @@ var guessClick = document.getElementById('user-input');
 
 //Submit button actions
 function enableGuess() {
-  event.preventDefault();
-  var min = document.querySelector('#min-input')
-  var max = document.querySelector('#max-input')
-  if (guessNum() >= minNum && guessNum() <= maxNum) {
-    document.getElementById("guess-button").disabled = false;
-  } else if  (guessNum() < minNum || guessNum() > maxNum) {
-    document.getElementById("guess-button").disabled = true;
-  } else if (document.querySelector('#user-input').value === '') {
-    document.getElementById("guess-button").disabled = true;
-  } 
+    event.preventDefault();
+    var min = document.querySelector('#min-input')
+    var max = document.querySelector('#max-input')
+    if (guessNum() >= minNum && guessNum() <= maxNum) {
+      document.getElementById("guess-button").disabled = false;
+    } else if  (guessNum() < minNum || guessNum() > maxNum) {
+      document.getElementById("guess-button").disabled = true;
+    } else if (document.querySelector('#user-input').value === '') {
+      document.getElementById("guess-button").disabled = true;
+    } 
 }
+
 document.getElementById("user-input").addEventListener('input', enableGuess, false);
 
 //activate and deactivate clear button
 function enableClear() {
-  event.preventDefault();
-  var userInput = document.getElementById("user-input");
-  if (userInput.value !== '') {
-    document.getElementById("clear-button").disabled = false;
-  } else if (userInput.value === '') {
-    document.getElementById("clear-button").disabled = true;
-  }
+    event.preventDefault();
+    var userInput = document.getElementById("user-input");
+    if (userInput.value !== '') {
+      document.getElementById("clear-button").disabled = false;
+    } else if (userInput.value === '') {
+      document.getElementById("clear-button").disabled = true;
+    }
 }
+
 document.getElementById("user-input").addEventListener('input', enableClear, false);
 
 //enable reset button
 function enableReset() {
-  var resetButton = document.querySelector('#reset-button');
-  var userInput = document.getElementById("user-input");
-  if (userInput.value > '') {
-    resetButton.disabled = false;
-  } 
+    var resetButton = document.querySelector('#reset-button');
+    var userInput = document.getElementById("user-input");
+    if (userInput.value > '') {
+      resetButton.disabled = false;
+    } 
 }
+
 document.getElementById("user-input").addEventListener('input', enableReset, false);
 
 //show text
 function displayText() {
-  if (document.querySelector('#user-input').value !== '') {
-  var textDisplay = document.querySelectorAll('p');
-  for (var i=0; i < textDisplay.length; i++) {
-    textDisplay[i].classList.add ('text');
-    textDisplay[i].classList.remove ('text--hidden');
-  }
+    if (document.querySelector('#user-input').value !== '') {
+    var textDisplay = document.querySelectorAll('p');
+    for (var i=0; i < textDisplay.length; i++) {
+      textDisplay[i].classList.add ('text');
+      textDisplay[i].classList.remove ('text--hidden');
+    }
+    }
 }
-}
+
 document.getElementById("user-input").addEventListener('input', displayText, false);
 
 //hide text from load
 function hideLoadText () {
-  var loadText = document.querySelector('.text-load');
-  if (document.querySelector('#user-input').value !== '') {
-    loadText.classList.add ('text--hidden');
-  }
+    var loadText = document.querySelector('.text-load');
+    if (document.querySelector('#user-input').value !== '') {
+      loadText.classList.add ('text--hidden');
+    }
 }
+
 document.getElementById("user-input").addEventListener('input', hideLoadText, false);
 
-function appearMinMax() {
-  document.querySelector('#minumus').innerText = minNum.value;
-  document.querySelector('#maximus').innerText
-   = maxNum.value;
-  console.log('cake')
+//updates a displayed min/max number for the user
+function minimusMaximus() {
+  document.querySelector('#minimus').innerHTML = minNum;
+  document.querySelector('#maximus').innerHTML = maxNum;
 }
-document.querySelector('#max-min-button').addEventListener('click', appearMinMax)
+document.querySelector('#max-min-button').addEventListener('click', minimusMaximus);
+document.querySelector('#guess-button').addEventListener('click', minimusMaximus);
 
-//appropriate text for the top that lets people know they can set their own numbers 
-//minNUm shows up on the left of the box and minRight shows up on the right of the guess form
-//reset is higher up
 //fix set button 
 //make sure appropriate UI checks out
 
- 
-//Boundaries
-// function limitNums() {
+//Disable Set Button
+ function disSetBtn() {
+    event.preventDefault();
+    var minInput = document.querySelector("#min-input");
+    var maxInput = document.querySelector('#max-input')
+    if (minInput.value !== '' && maxInput.value !== '') {
+      document.getElementById("clear-button").disabled = false;
+    } else if (minInput.value === '' || maxInput.value === '') {
+      document.querySelector('#max-min-button').disabled = true;
+    }
+}
+
+document.querySelector('#max-input').addEventListener('input', disSetBtn)
+document.querySelector('min-input').addEventListener('input', disSetBtn)
+// Boundaries
+// function disSet() {
 //   if (minNum > maxNum) {
 //     document.querySelector('#max-min-button').disabled = true;
 //   } else if (minNum < maxNum) {
@@ -148,12 +166,7 @@ document.querySelector('#max-min-button').addEventListener('click', appearMinMax
 // }
 // document.querySelector('#max-input').addEventListener('input', limitNums);
 // document.querySelector('#min-input').addEventListener('input', limitNums);
-// function increaseNum() {
-//   var 
-//   if (){
 
-//   }
-// }
 
 
 
