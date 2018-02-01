@@ -148,10 +148,12 @@ document.querySelector('#guess-button').addEventListener('click', minimusMaximus
     var minInput = document.querySelector("#min-input");
     var maxInput = document.querySelector('#max-input')
     if (minInput.value !== '' && maxInput.value !== '') {
-      document.getElementById("clear-button").disabled = false;
+      document.querySelector("#max-min-button").disabled = false;
     } else if (minInput.value === '' || maxInput.value === '') {
       document.querySelector('#max-min-button').disabled = true;
     }
+
+  console.log('parates')
 }
 
 document.querySelector('#max-input').addEventListener('input', disSetBtn)

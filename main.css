@@ -200,6 +200,10 @@ h1 {
   background-color: #eb008b;
 }
 
+.button-max-min:disabled {
+  background-color: #D0d2d3;
+}
+
 
 
 /*max min display */
