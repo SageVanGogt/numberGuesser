@@ -11,21 +11,22 @@
   </header>
   <form class="guess-form">
     <div id="range-input" class="range-form">
-      <input type="number" id="min-input" placeholder="min" class="min__input">
+      <input type="number" id="min-input" placeholder="min" class="min__input"><span id="minimus"></span>
       <input type="number" id="max-input" placeholder="max" class="max__input">
         <button type="submit" value="submit" class="button-max-min" id="max-min-button">Set</button>
+        <span id="maximus"></span>
     </div>
     <label for="guess"></label>
     <input type="number" id="user-input" placeholder="Enter your guess" class="form__input"></br>
-    <p id="error-text" class=" error-text-hidden error--text"> errortexthere </p>
+    <div id="error-text" class=" error-text-hidden error--text"> errortexthere </div>
     <div class="button-guess-clear">
       <button type="submit" value="submit" class="button--clickable button__guess" id="guess-button" disabled>Guess</button>
       <button type="reset" value="clear" class="button--clickable button__clear" id="clear-button" disabled>Clear</button>
     </div>
-    <p class="text-load">Guess a number between 1 and 100</p>
+    <p class="text-load">Set your min and max range before guess</p>
     <p class="text--hidden text__last">Your last guess was</p>
     <p id="last-guess" class="text--hidden text__guess">?</p>
-    <p id="display-response" class="text--hidden text__response">response</p>
+    <p id="display-response" class="text--hidden text__response">Will it be too high? Or too low?</p>
     <button type="clear" value="reset" class="button--clickable button__reset" id="reset-button" disabled>Reset</button>
   </form>
   <script type="text/javascript" src="add-content.js"></script>

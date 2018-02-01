@@ -80,7 +80,7 @@ h1 {
 }
 
 .button__guess, .button__clear {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 21%;
   padding: 8px 0;
 }
@@ -116,7 +116,7 @@ h1 {
 }
 
 .text__last {
-  margin-top: 101px;
+  margin-top: 50px;
 }
 
 .text--hidden {
@@ -143,21 +143,12 @@ h1 {
 }
 
 .range-form {
-  width: 43%;
+  width: 43.4%;
   height: 50px;
   margin-top: 20px;
   font-size: 1.5em;
   font-weight: 300;
-  margin-left: 30%;
-}
-
-.range-form--showing {
-  width: 40%;
-  height: 50px;
-  margin-top: 20px;
-  font-size: 1.5em;
-  font-weight: 300;
-  margin-left: 30%;
+  margin-left: 28.3%;
 }
 
 .max__input, .min__input {
@@ -171,9 +162,11 @@ h1 {
   float:right;
 }
 
+
 .min__input {
   float: left;
 }
+
 
 .button-max-min {
   text-decoration: none;
@@ -184,11 +177,11 @@ h1 {
   font-size: 1em;
   border-radius: 20px;
   font-weight: 300;
-  padding: 5px 15px;
+  padding: 5px 35px;
   margin-top:15px;
 }
 
-.button-max-min:disabled {
+/*.button-max-min:disabled {
   text-decoration: none;
   border: none;
   color: #ffffff;
@@ -199,8 +192,9 @@ h1 {
   font-weight: 300;
   padding: 5px 15px;
   margin-top:15px;
-}
+}*/
 
 .button-max-min:hover {
   background-color: #eb008b;
 }
+
