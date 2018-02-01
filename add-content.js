@@ -155,21 +155,23 @@ document.querySelector('#guess-button').addEventListener('click', minimusMaximus
 }
 
 document.querySelector('#max-input').addEventListener('input', disSetBtn)
-document.querySelector('min-input').addEventListener('input', disSetBtn)
+document.querySelector('#min-input').addEventListener('input', disSetBtn)
 
 
-//Disable Set Button if min is greater
-// function minMaxDisableBtn() {
-//     event.preventDefault();
-//     var minInput = document.querySelector("#min-input");
-//     var maxInput = document.querySelector('#max-input')
-//     if (minInput.value < maxInput.value) {
-//       document.querySelector("#max-min-button").disabled = false;
-//     } 
-// }
+// Disable Set Button if min is greater
+function minMaxDisableBtn() {
+    event.preventDefault();
+    var minInput = document.querySelector("#min-input");
+    var maxInput = document.querySelector('#max-input')
+    if (minInput.value < maxInput.value) {
+      document.querySelector("#max-min-button").disabled = false;
+    } else if (minInput.value >= maxInput.value) {
+      document.querySelector('#max-min-button').disabled = true;
+    }
+}
 
-// document.querySelector('#max-input').addEventListener('input', minMaxDisableBtn)
-// document.querySelector('min-input').addEventListener('input', minMaxDisbleBtn)
+document.querySelector('#max-input').addEventListener('input', minMaxDisableBtn)
+document.querySelector('min-input').addEventListener('input', minMaxDisbleBtn)
 
 
 
